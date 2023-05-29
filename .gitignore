@@ -1,0 +1,6 @@
+venv
+.vscode
+*/.terraform
+*/.terraform.*
+*/deploy.plan
+.env
