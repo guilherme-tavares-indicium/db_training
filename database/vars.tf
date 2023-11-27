@@ -1,7 +1,7 @@
 variable "engine_version" {
   type        = string
   description = "Database engine version. Should contain major and minor version."
-  default     = "14.1"
+  default     = "15.4"
 }
 
 variable "instance_class" {

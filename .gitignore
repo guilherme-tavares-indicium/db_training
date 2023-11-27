@@ -4,3 +4,4 @@ venv
 */.terraform.*
 */deploy.plan
 .env
+.venv
