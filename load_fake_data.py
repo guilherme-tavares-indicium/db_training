@@ -94,3 +94,40 @@ for _ in range(20):  # Generate 20 fake records
     cursor.execute(insert_query, (name, date, location))
 
 conn.commit()
+
+
+# create target table
+
+## Create the table if it doesn't exist
+create_table_query = """
+    DROP TABLE IF EXISTS issues;
+    CREATE TABLE issues (
+    url TEXT,
+    repository_url TEXT,
+    labels_url TEXT,
+    comments_url TEXT,
+    events_url TEXT,
+    html_url TEXT,
+    id TEXT,
+    node_id TEXT,
+    number TEXT,
+    title TEXT,
+    state TEXT,
+    locked TEXT,
+    assignee TEXT,
+    milestone TEXT,
+    comments TEXT,
+    created_at TEXT,
+    updated_at TEXT,
+    closed_at TEXT,
+    author_association TEXT,
+    active_lock_reason TEXT,
+    body TEXT,
+    timeline_url TEXT,
+    performed_via_github_app TEXT,
+    state_reason TEXT
+    );
+"""
+cursor = conn.cursor()
+cursor.execute(create_table_query)
+conn.commit()

@@ -1,6 +1,7 @@
 venv
 .vscode
 */.terraform
+*/terraform.tfstate*
 */.terraform.*
 */deploy.plan
 .env

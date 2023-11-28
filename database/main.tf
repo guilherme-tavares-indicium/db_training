@@ -50,8 +50,8 @@ module "security_group" {
       from_port   = local.port
       to_port     = local.port
       protocol    = "tcp"
-      description = "PostgreSQL access from my IP"
-      cidr_blocks = format("%s/32", jsondecode(data.http.my_ip.response_body).ip)
+      description = "PostgreSQL access from the internet"
+      cidr_blocks = "0.0.0.0/0"
     },
   ]
 

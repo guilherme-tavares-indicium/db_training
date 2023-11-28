@@ -14,8 +14,8 @@ locals {
       from_port   = 0
       to_port     = 0
       protocol    = "-1"
-      description = "Allow all traffic to the IP that belongs to machine running terraform apply"
-      cidr_blocks = format("%s/32", jsondecode(data.http.my_ip.response_body).ip)
+      description = "Allow all traffic"
+      cidr_blocks = "0.0.0.0/0"
     },
   ]
   ingress_with_self = [
